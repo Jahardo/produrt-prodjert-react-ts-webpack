@@ -1,16 +1,15 @@
-import {render} from "react-dom";
-import {Counter} from "./component/Counter";
-import App from "./App";
-import {BrowserRouter} from "react-router-dom";
-import ThemeProvider from "./theme/ThemeProvider";
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
+import App from './app/App';
+import './shared/config/i18n/i18n';
 
+const root = createRoot(document.getElementById('root'));
 
-
-render (
+root.render(
     <BrowserRouter>
-       <ThemeProvider>
-           <App/>
-       </ThemeProvider>
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
     </BrowserRouter>,
-    document.getElementById(`root`)
-)
+);
