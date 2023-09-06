@@ -1,10 +1,9 @@
 .app-light {
-  --bg-color: rgba(157, 11, 173, 0.13);
-  --inverted-bg-color: rgba(35, 32, 32, 0.8);
-
-  --primary-color: rgb(138, 34, 178);
-  --secondary-color: rgb(50, 8, 79);
-  --inverted-primary-color: rgb(58, 4, 34);
-  --inverted-secondary-color: rgba(80, 37, 6, 0.9);
+    --bg-color: rgb(157 11 173 / 13%);
+    --inverted-bg-color: rgb(35 32 32 / 80%);
+    --primary-color: rgb(138 34 178);
+    --secondary-color: rgb(50 8 79);
+    --inverted-primary-color: rgb(58 4 34);
+    --inverted-secondary-color: rgb(80 37 6 / 90%);
 
 }
