@@ -1,5 +1,7 @@
 {
   "test example":"тестовий зразок",
   "translate": "переклад",
-  "Language": "Українська"
+  "Language": "Українська",
+  "toggle": "toggle",
+  "about": "about"
 }
