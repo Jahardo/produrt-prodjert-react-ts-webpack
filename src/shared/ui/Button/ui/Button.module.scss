@@ -9,3 +9,16 @@
     background: none;
     outline: none;
 }
+
+.submit {
+    background: none;
+    border: 2px solid var(--primary-color);
+    font: var(--font-l);
+    border-radius: 20%;
+}
+
+.submit:hover {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}

@@ -1,8 +1,10 @@
 import { ClassNames } from 'shared/lib/ClassNames';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
-import { useTranslation } from 'react-i18next';
+import ArrowSmallLeft from 'shared/assets/icons/ArrowSmallLeft.svg';
+import ArrowSmallRight from 'shared/assets/icons/ArrowSmallRight.svg';
+import { Button, ThemeButton } from 'shared/ui/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -10,19 +12,44 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ className }:SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation();
+    const [collapsed, setCollapsed] = useState(true);
+    // const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed((prevState) => !prevState);
     };
-
     return (
-        <div className={ClassNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <button type="button" onClick={onToggle}>{t('toggle')}</button>
-            <div className={cls.switchers}>
+        <div className={ClassNames(cls.Sidebar, {
+            [cls.collapsed]: collapsed,
+        }, [className])}
+        >
+            <Button
+                type="button"
+                theme={ThemeButton.CLEAR}
+                onClick={onToggle}
+                className={ClassNames(cls.SideButton, {
+                    [cls.ButtonCollapsed]: collapsed,
+                }, [])}
+            >
+                {collapsed
+                    ? <ArrowSmallRight />
+                    : <ArrowSmallLeft />}
+            </Button>
+            <div className={ClassNames(
+                cls.switchers,
+                {
+                    [cls.switchersCollapsed]: collapsed,
+                },
+                [],
+            )}
+            >
                 <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} />
+                <LangSwitcher className={ClassNames(
+                    '',
+                    { [cls.lang]: !collapsed },
+                    [],
+                )}
+                />
             </div>
         </div>
     );

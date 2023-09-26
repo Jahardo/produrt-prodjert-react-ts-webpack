@@ -1,11 +1,22 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { LoginForm } from 'witgets/LoginForm';
+import { ClassNames } from 'shared/lib/ClassNames';
+import { VideoSettingDropDown } from 'witgets/VideoSettingDropDown';
+import { PreEnterVideoElement } from 'witgets/PreEnterVideoElement';
+import cls from './Main.module.scss';
 
-const Main = () => {
+interface MainProps {
+    className?: string
+}
+
+const Main = ({ className }:MainProps) => {
     const { t } = useTranslation('main');
     return (
-        <div>
-            {t('MainPage')}
+        <div className={ClassNames(cls.Main, {}, [cls.center, className])}>
+            <PreEnterVideoElement />
+            <LoginForm />
+            <VideoSettingDropDown />
         </div>
     );
 };
