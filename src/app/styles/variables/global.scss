@@ -18,8 +18,6 @@
     --sidebar-button-height:40px;
 
     // sliders
-    --light: rgb(216 219 224 / 98%);
-    --dark: #28292c;
     --link: rgb(27 129 112);
     --link-hover: rgb(24 94 82);
 
@@ -31,6 +29,14 @@
     --video-drop-down-width:400px;
     --video-drop-down-height:70px;
     --video-drop-down-height-collapsed:600px;
+
+    // MeetControlPanel
+    --control-panel-height:100px;
+
+    // main colors
+    --light: rgb(216 219 224 / 98%);
+    --dark: #28292c;
+    --button-disabled-color: #e66465;
 
     
 }

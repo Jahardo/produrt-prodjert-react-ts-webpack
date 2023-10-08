@@ -3,16 +3,19 @@ import { MainPage } from 'pages/MainPage';
 import React from 'react';
 import { AboutPage } from 'pages/AboutPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { RoomPage } from 'pages/RoomPage';
 
 export enum AppRoutes {
     MAIN='main',
     ABOUT = 'about',
-    NOT_FOUND = 'not_found'
+    NOT_FOUND = 'not_found',
+    ROOM = 'room'
 }
 
 export const RouterPath:Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
+    [AppRoutes.ROOM]: '/room/:id',
     [AppRoutes.NOT_FOUND]: '*',
 
 };
@@ -32,5 +35,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         path: RouterPath.not_found,
         element: <NotFoundPage />,
 
+    },
+    [AppRoutes.ROOM]: {
+        path: RouterPath.room,
+        element: <RoomPage />,
     },
 };

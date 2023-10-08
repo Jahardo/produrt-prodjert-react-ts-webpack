@@ -3,6 +3,7 @@
     height: var(--navbar-height);
     background-color: var(--inverted-bg-color);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding:20px;
 
@@ -14,4 +15,8 @@
 
 .mainLink {
     margin-right: 15px;
+}
+.switcher {
+    display: flex;
+    gap:15px;
 }

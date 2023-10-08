@@ -16,12 +16,13 @@
     height: var(--sidebar-button-height);
     top : calc(calc(100vh - var(--navbar-height)) / 2);
     display: flex;
-    left: calc(var(--sidebar-width) - var(--sidebar-button-with));
+    right: 0;
     transition: left 0.3s;
 }
 
 .ButtonCollapsed {
-    left: calc(var(--sidebar-width-collapsed) - var(--sidebar-button-with));
+    position: absolute;
+    right: 0;
 }
 
 

@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { useTranslation } from 'react-i18next';
 import ArrowSmallDown from 'shared/assets/icons/ArrowSmallDown.svg';
 import ArrowSmallUp from 'shared/assets/icons/ArrowSmallUp.svg';

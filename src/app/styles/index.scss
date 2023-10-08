@@ -11,13 +11,13 @@ body {
 .app {
     background : var(--bg-color);
     min-height : 100vh;
+    min-width: 100vw;
 
 }
 
 .content-page {
-    display: flex;
 }
 
 .page-wrapper {
-    flex-grow: 1;
+
 }

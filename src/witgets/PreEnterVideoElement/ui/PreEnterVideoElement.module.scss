@@ -5,20 +5,11 @@
 
 .PreEnterVideoElement {
     background: linear-gradient(#e66465, #9198e5);
-    width: var(--video-element-height);
     position: relative;
 
 }
 
-.Video {
 
-}
-
-.btn {
-    border: solid 1px var(--light);
-    height: 22px;
-    width: 22px;
-}
 
 .btnPositions {
     display: flex;
@@ -27,18 +18,4 @@
     transform: scale(2);
     bottom:5%;
     left:10%;
-}
-
-
-
-.btnPressed {
-    background-color: #e66465;
-}
-
-.iconOff {
-    color: var(--light);
-}
-
-.iconOn {
-    color: var(--light);
 }

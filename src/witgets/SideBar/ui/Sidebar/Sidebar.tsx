@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import React, { useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';

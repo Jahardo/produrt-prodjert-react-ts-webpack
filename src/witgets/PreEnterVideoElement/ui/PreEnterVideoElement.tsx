@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { useState } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button';
 import MicrophoneOff from 'shared/assets/icons/MicrophoneOff.svg';
@@ -6,6 +6,7 @@ import MicrophoneOn from 'shared/assets/icons/MicrophoneOn.svg';
 import VideoCamera from 'shared/assets/icons/VideoCamera.svg';
 import VideoCameraSlash from 'shared/assets/icons/VideoCameraSlash.svg';
 import { LocalVideo } from 'shared/ui/Video';
+import { CameraButton, MicrophoneButton } from 'shared/SpecialButtons';
 import cls from './PreEnterVideoElement.module.scss';
 
 interface PreEnterVideoElementProps {
@@ -26,24 +27,8 @@ export const PreEnterVideoElement = ({ className }:PreEnterVideoElementProps) =>
         <div className={ClassNames(cls.PreEnterVideoElement, {}, [className])}>
             <LocalVideo className={cls.Video} />
             <div className={cls.btnPositions}>
-                <Button
-                    theme={ThemeButton.CLEAR}
-                    onClick={handleButtonCameraPress}
-                    className={ClassNames(cls.btn, { [cls.btnPressed]: !isCamera }, [])}
-                >
-                    {isCamera
-                        ? <VideoCamera className={cls.iconOn} />
-                        : <VideoCameraSlash className={cls.iconOff} />}
-                </Button>
-                <Button
-                    theme={ThemeButton.CLEAR}
-                    onClick={handleButtonMicroPress}
-                    className={ClassNames(cls.btn, { [cls.btnPressed]: !isMicro }, [className])}
-                >
-                    {isMicro
-                        ? <MicrophoneOn className={cls.iconOn} />
-                        : <MicrophoneOff className={cls.iconOff} />}
-                </Button>
+                <CameraButton />
+                <MicrophoneButton />
             </div>
         </div>
     );

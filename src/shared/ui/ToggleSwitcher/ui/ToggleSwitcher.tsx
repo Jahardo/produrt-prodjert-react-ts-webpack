@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import React, { FC, InputHTMLAttributes } from 'react';
 import cls from './ToggleSwitcher.module.scss';
 
