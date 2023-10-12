@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import React from 'react';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import Dark from 'shared/assets/icons/Dark.svg';

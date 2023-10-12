@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import { FC, ReactNode } from 'react';
 import cls from './SideScroll.module.scss';
 

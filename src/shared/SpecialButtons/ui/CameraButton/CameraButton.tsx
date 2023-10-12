@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import React, { useState } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button';
 import VideoCamera from 'shared/assets/icons/VideoCamera.svg';

@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import { useState, VideoHTMLAttributes } from 'react';
 import { LocalVideo } from 'shared/ui/Video';
 import { useTranslation } from 'react-i18next';

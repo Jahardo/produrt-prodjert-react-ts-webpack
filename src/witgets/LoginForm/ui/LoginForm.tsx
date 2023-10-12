@@ -1,4 +1,3 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button';
 import { Input } from 'shared/ui/Input';
@@ -6,6 +5,7 @@ import { InputTheme } from 'shared/ui/Input/ui/Input';
 import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
 import { useState } from 'react';
+import { ClassNames } from 'shared/lib/ClassNames';
 import cls from './LoginForm.module.scss';
 
 interface LoginFormProps {
@@ -14,10 +14,9 @@ interface LoginFormProps {
 
 export const LoginForm = ({ className }:LoginFormProps) => {
     const { t } = useTranslation('main');
-    const [isJoin, setIsJoin] = useState(true);
     const navigate = useNavigate();
     const joinRoom = () => {
-        navigate(`/room/${v4()}`);
+
     };
     return (
         <div className={ClassNames(cls.LoginForm, {}, [className])}>
@@ -30,20 +29,6 @@ export const LoginForm = ({ className }:LoginFormProps) => {
                     autoComplete="off"
                     theme={InputTheme.SMALL}
                 />
-                {isJoin
-                    ? (
-                        <div>
-                            <span>{t('Write Rooms id')}</span>
-                            <Input
-                                type="text"
-                                placeholder="Room"
-                                autoComplete="off"
-                                theme={InputTheme.SMALL}
-                            />
-                        </div>
-                    )
-
-                    : <div />}
                 <div className={cls.createOrJoin}>
                     <Button
                         onClick={joinRoom}

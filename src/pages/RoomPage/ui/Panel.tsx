@@ -1,15 +1,15 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import cls from 'pages/RoomPage/ui/Room.module.scss';
-import { VideoCart } from 'entities/VideoCart';
 import { useState } from 'react';
 import { SideScroll } from 'shared/ui/SideScroll';
+import { VideoCart } from 'features/VideoCart';
 
 interface PanelProps {
-    clients?: any
     className?: string
 }
 
-const Panel = ({ clients, className }:PanelProps) => {
+const Panel = ({ className }:PanelProps) => {
+    const clients = [1, 2, 3, 4, 5, 6, 7, 8];
     const [isMain, setIsMain] = useState(true);
     const mainClient = 1;
     if (isMain) {

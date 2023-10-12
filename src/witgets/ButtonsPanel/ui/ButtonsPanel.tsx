@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import { useState } from 'react';
 import { CameraButton, MicrophoneButton } from 'shared/SpecialButtons';
 import cls from './ButtonsPanel.module.scss';

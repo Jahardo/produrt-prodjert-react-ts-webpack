@@ -7,4 +7,4 @@ const options:object = {
     transports: ['websocket'],
 };
 
-export const socket = io('http://localhost:5000', options);
+export const socket = io('http://localhost:3000', options);

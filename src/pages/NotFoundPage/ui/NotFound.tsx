@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import { useTranslation } from 'react-i18next';
 import cls from './NotFound.module.scss';
 

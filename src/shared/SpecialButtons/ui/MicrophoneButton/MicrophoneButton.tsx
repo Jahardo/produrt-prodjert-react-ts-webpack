@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames';
 import { Button, ThemeButton } from 'shared/ui/Button';
 import MicrophoneOn from 'shared/assets/icons/MicrophoneOn.svg';
 import MicrophoneOff from 'shared/assets/icons/MicrophoneOff.svg';
